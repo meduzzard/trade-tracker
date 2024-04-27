@@ -1,38 +1,92 @@
+/* Globalni stili */
+body, html {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden; /* Preprečuje horizontalni scroll */
+  overflow-y: auto; /* Omogoča vertikalni scroll */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+}
+
+/* Glavni App kontejner */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Navigacijska vrstica */
+nav {
   color: white;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-color: #000000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Stili za domačo stran in posamezne dele */
+.home-page__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.home-page__title h2,
+.home-page__description p,
+.home-page__content__left__title h2,
+.home-page__content__left__description p {
+  color: #ffffff;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.home-page__description p,
+.home-page__content__left__description p {
+  font-size: 1.2rem;
+}
+
+.home-page__content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.home-page__content__left, .home-page__content__right {
+  flex: 1;
+  padding: 20px;
+}
+
+.home-page__content__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
